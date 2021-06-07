@@ -6,7 +6,15 @@
   "repository": "git@github.com:robertoshimizu/memoeating.git",
   "author": "robertoshimizu <rshimizubr@gmail.com>",
   "license": "MIT",
-  "dependencies": {
+  "scripts": {
+    "build": "postcss css/tailwind.css -o public/build/tailwind.css"
+  },
+  "devDependencies": {
     "eslint": "^7.28.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.1.4"
   }
 }
