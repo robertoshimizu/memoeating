@@ -1,0 +1,12 @@
+{
+  "name": "memoeating",
+  "version": "1.0.0",
+  "description": "site institucional da empresa",
+  "main": "index.js",
+  "repository": "git@github.com:robertoshimizu/memoeating.git",
+  "author": "robertoshimizu <rshimizubr@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^7.28.0"
+  }
+}
