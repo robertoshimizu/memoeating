@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'light-blue': colors.lightBlue,
+        teal: colors.teal,
         cyan: colors.cyan,
       },
     },
@@ -15,5 +15,6 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+  ],
 }
