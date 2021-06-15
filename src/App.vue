@@ -1,15 +1,13 @@
-/* eslint-disable vue/valid-template-root */
 <template>
-  <Hero/>
+  <Landing/>
 </template>
 
 <script>
-import Hero from './components/Hero.vue'
-
+import Landing from './components/LandingPage.vue'
 export default {
   name: 'App',
   components: {
-    Hero
+    Landing
   }
 }
 </script>
