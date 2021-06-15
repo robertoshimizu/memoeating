@@ -17,6 +17,7 @@ module.exports = {
     ],
     "rules": {
         "vue/no-multiple-template-root": "off",
-        "vue/valid-template-root":"off"
+        "vue/valid-template-root":"off",
+        'vue/experimental-script-setup-vars':"off"
     }
 };
