@@ -1,23 +1,13 @@
 <template>
   <header class="bg-white">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-      <div
-        class="
-          w-full
-          py-6
-          flex
-          items-center
-          justify-between
-          border-b border-indigo-500
-          lg:border-none
-        "
-      >
+      <div class="w-full py-6 flex items-center justify-between lg:border-none">
         <div class="flex items-center">
           <a href="#">
             <span class="sr-only">Memoeating</span>
             <img
               class="w-auto"
-              style="height: 8rem"
+              style="height: 12rem"
               src="../assets/image.svg"
               alt=""
             />
@@ -27,7 +17,7 @@
               v-for="link in navigation"
               :key="link.name"
               :href="link.href"
-              class="text-base font-medium text-black hover:text-indigo-50"
+              class="text-lg font-large text-black hover:text-indigo-100"
             >
               {{ link.name }}
             </a>
@@ -39,7 +29,7 @@
           v-for="link in navigation"
           :key="link.name"
           :href="link.href"
-          class="text-base font-medium text-black hover:text-indigo-50"
+          class="text-base font-medium text-black hover:text-indigo-100"
         >
           {{ link.name }}
         </a>
@@ -67,4 +57,3 @@ export default {
   },
 };
 </script>
-

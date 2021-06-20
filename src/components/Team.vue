@@ -18,11 +18,9 @@
       <div class="relative lg:-my-8">
         <div
           aria-hidden="true"
-          class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
+          class="absolute -top-2 h-1/2 bg-white lg:hidden"
         />
-        <div
-          class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full"
-        >
+        <div class="mx-auto max-w-md px-4 sm:max-w-xl sm:px-6 lg:p-0 lg:h-full">
           <div
             class="
               aspect-w-10 aspect-h-6
@@ -87,7 +85,6 @@
 
 <script>
 export default {
-  name: "Team",
+  name: "Team"
 };
 </script>
-
