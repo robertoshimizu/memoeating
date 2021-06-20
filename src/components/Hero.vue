@@ -97,18 +97,18 @@
         "
       >
         <img
-          class="absolute inset-0 w-full h-full object-cover"
+          class="absolute inset-0 w-full h-full lg:w-5/6 lg:h-5/6 object-cover"
           src="https://images.unsplash.com/photo-1564758596018-3e5b1f2340cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
           alt=""
         />
       </div>
     </main>
+    <br />
   </div>
 </template>
 
 <script>
 export default {
-  name: "Hero",
+  name: "Hero"
 };
 </script>
-
