@@ -52,8 +52,9 @@
 const navigation = [
   { name: "Soluções", href: "#" },
   { name: "Rede Colaborativa", href: "#" },
-  { name: "Novidades", href: "#" },
   { name: "Sobre nós", href: "#" },
+  { name: "Blog", href: "#" },
+  { name: "Contatos", href: "#" },
 ];
 
 export default {
