@@ -1,73 +1,138 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class="py-12 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="lg:text-center">
-        <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Transactions</h2>
-        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          A better way to send money
-        </p>
-        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-          Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.
-        </p>
+  <div class="bg-white">
+    <!-- Header -->
+    <div class="relative pb-32 bg-gray-800">
+      <div class="absolute inset-0">
+        <img
+          class="w-full h-full object-cover"
+          src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
+          alt=""
+        />
+        <div
+          class="absolute inset-0 bg-gray-800 mix-blend-multiply"
+          aria-hidden="true"
+        />
       </div>
-
-      <div class="mt-10">
-        <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-          <div v-for="feature in features" :key="feature.name" class="relative">
-            <dt>
-              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                <component :is="feature.icon" class="h-6 w-6" aria-hidden="true" />
-              </div>
-              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">{{ feature.name }}</p>
-            </dt>
-            <dd class="mt-2 ml-16 text-base text-gray-500">
-              {{ feature.description }}
-            </dd>
-          </div>
-        </dl>
+      <div
+        class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8"
+      >
+        <h1
+          class="
+            text-4xl
+            font-extrabold
+            tracking-tight
+            text-white
+            md:text-5xl
+            lg:text-6xl
+          "
+        >
+          Soluções
+        </h1>
+        <p class="mt-6 max-w-3xl text-xl text-gray-300">
+          Aplicamos diversos TESTES DE PRODUTO, com operadores e consumidores,
+          para validar protótipos, entender gargalos operacionais, GAPS de
+          qualidade e oportunidades de insumos alternativos. Propomos soluções
+          técnicas a fim de garantir ou elevar a qualidade na experiência de
+          consumo.
+        </p>
       </div>
     </div>
+
+    <!-- Overlapping cards -->
+    <section
+      class="-mt-32 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
+      aria-labelledby="contact-heading"
+    >
+      <h2 class="sr-only" id="contact-heading">Contact us</h2>
+      <div
+        class="grid grid-cols-1 gap-y-20 lg:grid-cols-2 lg:gap-y-0 lg:gap-x-8"
+      >
+        <div
+          v-for="link in supportLinks"
+          :key="link.name"
+          class="flex flex-col bg-white rounded-2xl shadow-xl"
+        >
+          <div class="flex-1 relative pt-16 px-6 pb-8 md:px-8">
+            <div
+              class="
+                absolute
+                top-0
+                p-5
+                inline-block
+                bg-indigo-600
+                rounded-xl
+                shadow-lg
+                transform
+                -translate-y-1/2
+              "
+            >
+              <component
+                :is="link.icon"
+                class="h-6 w-6 text-white"
+                aria-hidden="true"
+              />
+            </div>
+            <h3 class="text-xl font-medium text-gray-900">{{ link.name }}</h3>
+            <p class="mt-4 text-base text-gray-500">{{ link.description }}</p>
+          </div>
+          <!-- <div class="p-6 bg-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
+            <a
+              :href="link.href"
+              class="
+                text-base
+                font-medium
+                text-indigo-700
+                hover:text-indigo-600
+              "
+              >Contact us<span aria-hidden="true"> &rarr;</span></a
+            >
+          </div> -->
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/vue/outline'
+import { NewspaperIcon, PhoneIcon, SupportIcon } from "@heroicons/vue/outline";
 
-const features = [
+const supportLinks = [
   {
-    name: 'Competitive exchange rates',
+    name: "Com Operadores (cozinha)",
+    href: "#",
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: GlobeAltIcon,
+      "Rastreamos as transformações do alimento ao longo do processo operacional para identificar pontos críticos e estudar melhorias. Aplicamos testes de performance e qualidade de insumo novo ou existente. Desenvolvemos Indicadores de Performance e metodologias exclusivas de avaliação, sempre pensando no contexto real da operação.",
+    icon: PhoneIcon,
   },
   {
-    name: 'No hidden fees',
+    name: "Com Consumidores (restaurantes / casa)",
+    href: "#",
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: ScaleIcon,
+      "Aprofundamos o conhecimento sobre a satisfação SENSORIAL da experiência de consumo.Aplicamos diversos testes sensoriais tanto no ponto de venda físico como no consumo in-home (via delivery/to-go).Planejamos metodologias exclusivas para alcançar os objetivos, sempre pensando no contexto real de consumo.",
+    icon: SupportIcon,
   },
-  {
-    name: 'Transfers are instant',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LightningBoltIcon,
-  },
-  {
-    name: 'Mobile notifications',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: AnnotationIcon,
-  },
-]
+  // {
+  //   name: "Media Inquiries",
+  //   href: "#",
+  //   description:
+  //     "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
+  //   icon: NewspaperIcon,
+  // },
+];
 
 export default {
-  name:'Features',
+  name: "Features",
+  components: {
+    NewspaperIcon,
+    PhoneIcon,
+    SupportIcon,
+  },
   setup() {
     return {
-      features,
-    }
+      supportLinks,
+    };
   },
-}
+};
 </script>
 
